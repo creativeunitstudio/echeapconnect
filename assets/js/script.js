@@ -285,7 +285,7 @@ function sendWhatsApp(event) {
         const contactNumber = document.getElementById('contact-number').value;
 
         const message = `Name: ${name}%0AStreet: ${street}%0ACity: ${city}%0AProvince: ${province}%0APostal Code: ${postalCode}%0AEmail: ${email}%0AContact Number: ${contactNumber}`;
-        const whatsappNumber = '0726962588'; // Replace with your WhatsApp number
+        const whatsappNumber = '27726962588'; // Replace with your WhatsApp number
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
 
         window.open(whatsappURL, '_blank'); // Open WhatsApp in a new tab
