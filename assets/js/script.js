@@ -274,20 +274,28 @@ function filterProducts() {
 }
 
 function sendWhatsApp(event) {
-        event.preventDefault(); // Prevent form submission
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const street = document.getElementById('street').value;
+    const city = document.getElementById('city').value;
+    const province = document.getElementById('province').value;
+    const postalCode = document.getElementById('postal-code').value;
+    const email = document.getElementById('email').value;
+    const contactNumber = document.getElementById('contact-number').value;
+    const message = document.getElementById('message').value;
 
-        const name = document.getElementById('name').value;
-        const street = document.getElementById('street').value;
-        const city = document.getElementById('city').value;
-        const province = document.getElementById('province').value;
-        const postalCode = document.getElementById('postal-code').value;
-        const email = document.getElementById('email').value;
-        const contactNumber = document.getElementById('contact-number').value;
+    // Construct the WhatsApp message
+    const whatsappMessage = `Name: ${name}\nStreet: ${street}\nCity: ${city}\nProvince: ${province}\nPostal Code: ${postalCode}\nEmail: ${email}\nContact Number: ${contactNumber}\nMessage: ${message}`;
 
-        const message = `Name: ${name}%0AStreet: ${street}%0ACity: ${city}%0AProvince: ${province}%0APostal Code: ${postalCode}%0AEmail: ${email}%0AContact Number: ${contactNumber}`;
-        const whatsappNumber = '27726962588'; // Replace with your WhatsApp number
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-        window.open(whatsappURL, '_blank'); // Open WhatsApp in a new tab
-    }
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // WhatsApp API link (replace YOUR_PHONE_NUMBER with the actual number)
+    const whatsappUrl = `https://wa.me/27726962588?text=${encodedMessage}`;
+    
+    // Open WhatsApp with the constructed message
+    window.open(whatsappUrl, '_blank');
+}
 
