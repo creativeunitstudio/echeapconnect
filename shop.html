@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Shop</title>
+</head>
+<header class="header">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Echeap Connect Logo" />
+        </div>
+		<div class="search-container">
+    <input type="text" id="search-input" placeholder="Search products..." />
+</div>
+        <div class="cart-icon" onclick="viewCart()">
+    <img src="assets/img/cart.png" alt="Cart Icon" />
+</div>
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <ul class="menu" id="menu">
+			<li><a href="index.html" class="menu-link">Home</a></li>
+                <li>Shop
+                    <ul class="submenu">
+                        <li>All Products</li>
+                        <li>Accessories</li>
+                        <li>Audio</li>
+                        <li>Backup Power</li>
+                        <li>Bags, Cases And Sleeves</li>
+                        <li>Consumables And Supplies</li>
+                        <li>Desktops</li>
+                        <li>Displays</li>
+                        <li>Keyboards And Mices</li>
+						<li>Laptops</li>
+                        <li>Storage</li>
+                        <li>Softwares</li>
+                        <li>Printers</li>
+                    </ul>
+                </li>
+				<li>Contact
+                    <ul class="submenu">
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>WhatsApp</li>
+                        <li>Contact Number</li>
+                    </ul>
+                </li>
+				<li>Address
+                    <ul class="submenu">
+                        <li>Maps</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+	
+	<div class="product-grid">
+	
+	<!---PRODUCT 17--->
+	<div class="product" data-category="laptops">
+        <img src="products/product17.jpg" alt="Product 17">
+        <h3>HP 250 G9 15.6"</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> 250 G9</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 32GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R6599</p>
+        <!---cart button--->
+		<button onclick="addToCart('HP 250 G9 15.6', 6599)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 1--->
+    <div class="product" data-category="desktops">
+        <img src="products/product01.jpg" alt="Product 1">
+        <h3>Dell Vostro 3910</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> Vostro 3910</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13499</p>
+		<!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 2--->
+	<div class="product" data-category="desktops">
+        <img src="products/product02.jpg" alt="Product 2">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Lenovo ThinkCentre Neo 50s', 13999.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 18--->
+	<div class="product" data-category="laptops">
+        <img src="products/product18.jpg" alt="Product 18">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 3--->
+	<div class="product" data-category="displays">
+        <img src="products/product03.jpg" alt="Product 3">
+        <h3>Lenovo ThinkCentre Neo 30a</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> Neo 30a</li>
+		<li><strong>Display:</strong> 27inch</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R22999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Lenovo ThinkCentre Neo 30a', 22999.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 4--->
+	<div class="product" data-category="desktops">
+        <img src="products/product04.jpg" alt="Product 4">
+        <h3>Lenovo ThinkCentre M70s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> Neo M70s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R14999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 5--->
+	<div class="product" data-category="desktops">
+        <img src="products/product05.jpg" alt="Product 5">
+        <h3>Lenovo ThinkCentre Neo 50q</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> Neo 50q</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13499</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 19--->
+	<div class="product" data-category="laptops">
+        <img src="products/product19.jpg" alt="Product 19">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+    
+	<!---PRODUCT 6--->
+	<div class="product" data-category="desktops">
+        <img src="products/product06.jpg" alt="Product 6">
+        <h3>Lenovo ThinkCentre Neo 50T G5</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> Neo 50T G5</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 7--->
+	<div class="product" data-category="displays">
+        <img src="products/product07.jpg" alt="Product 7">
+        <h3>HP Proone 440 G9</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> 440 G9</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R16199</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 8--->
+	<div class="product" data-category="desktops">
+        <img src="products/product08.jpg" alt="Product 8">
+        <h3>HP Pro Tower 400 G9</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> 400 G9</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 20--->
+	<div class="product" data-category="laptops">
+        <img src="products/product20.jpg" alt="Product 20">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 21--->
+	<div class="product" data-category="laptops">
+        <img src="products/product21.jpg" alt="Product 21">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 9--->
+	<div class="product" data-category="desktops">
+        <img src="products/product09.jpg" alt="Product 9">
+        <h3>HP T755 Thinclient</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> HP T755</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13450</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 10--->
+	<div class="product" data-category="desktops">
+        <img src="products/product10.jpg" alt="Product 10">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 11--->
+	<div class="product" data-category="displays">
+        <img src="products/product11.jpg" alt="Product 11">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 12--->
+	<div class="product" data-category="displays">
+        <img src="products/product12.jpg" alt="Product 12">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 13--->
+	<div class="product" data-category="desktops">
+        <img src="products/product13.jpg" alt="Product 13">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 14--->
+	<div class="product" data-category="desktops">
+        <img src="products/product14.jpg" alt="Product 14">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 15--->
+	<div class="product" data-category="desktops">
+        <img src="products/product15.jpg" alt="Product 15">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+	
+	<!---PRODUCT 16--->
+	<div class="product" data-category="displays">
+        <img src="products/product16.jpg" alt="Product 16">
+        <h3>Lenovo ThinkCentre Neo 50s</h3>
+		<h5 class="product-info">
+		<li><strong>Model:</strong> ThinkCentre Neo 50s</li>
+		<li><strong>Storage:</strong> 1TB</li>
+		<li><strong>RAM:</strong> 4GB</li>
+		<li><strong>CPU:</strong> Core i5-12400</li>
+		</h5>
+        <p>Price: R13999</p>
+        <!---cart button--->
+		<button onclick="addToCart('Dell Vostro 3910', 13499.99)" 
+		style="background-image: url('assets/img/add-to-cart.png');"
+		class="add-to-cart-button"></button>
+    </div>
+
+</div>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+        <button onclick="clearCart()" >Clear Cart</button>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+	<footer>
+		<div class="logo-footer"><p>In partnership with</p>
+            <img src="assets/img/logo2.png" alt="Echeap Connect Logo" />
+        </div>
+    </footer>
+	
+    <script src="assets/js/script.js"></script> 
+</body>
+</html>
