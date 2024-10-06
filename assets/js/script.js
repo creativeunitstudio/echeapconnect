@@ -87,6 +87,8 @@ document.querySelectorAll('.menu > li').forEach(item => {
     });
 });
 
+
+
 let cart = [];
 
 function addToCart(productName, price) {
@@ -199,8 +201,8 @@ function viewCart() {
             cartItemDiv.className = 'cart-item';
             cartItemDiv.innerHTML = `
                 ${item.name} - R ${item.price} x ${item.quantity} = R ${itemTotal.toFixed(2)}
-                <button onclick="changeQuantity('${item.name}', 1)">+</button>
                 <button onclick="changeQuantity('${item.name}', -1)">-</button>
+				<button onclick="changeQuantity('${item.name}', 1)">+</button>
             `;
             cartItemsContainer.appendChild(cartItemDiv);
         });
@@ -278,6 +280,12 @@ function checkout() {
     // Open WhatsApp link in a new tab
     window.open(whatsappLink, '_blank');
 }
+
+// ... rest of your existing functions remain unchanged ...
+
+// For demonstration, you can attach the checkout function to a button
+document.getElementById('checkoutButton').onclick = checkout;
+
 
 function filterProducts() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
