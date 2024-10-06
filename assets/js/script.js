@@ -87,8 +87,6 @@ document.querySelectorAll('.menu > li').forEach(item => {
     });
 });
 
-
-
 let cart = [];
 
 function addToCart(productName, price) {
@@ -251,6 +249,34 @@ window.onclick = function(event) {
     if (event.target === modal) {
         modal.style.display = "none";
     }
+}
+
+// Function to checkout via WhatsApp
+function checkout() {
+    const cart = getCart();
+    if (cart.length === 0) {
+        alert("Your cart is empty. Please add items before checking out.");
+        return;
+    }
+
+    let message = "Hello! I would like to place an order for the following items:\n\n";
+    let total = 0;
+
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        message += `${item.name} - R ${item.price} x ${item.quantity} = R ${itemTotal.toFixed(2)}\n`;
+    });
+
+    message += `\nTotal: R ${total.toFixed(2)}\n`;
+    message += "Please confirm my order.";
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappLink = `https://wa.me/27726962588?text=${encodedMessage}`;
+
+    // Open WhatsApp link in a new tab
+    window.open(whatsappLink, '_blank');
 }
 
 function filterProducts() {
